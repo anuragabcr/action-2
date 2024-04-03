@@ -1,0 +1,27 @@
+name: Solor system workflow
+
+on: 
+    workflow_dispatch: 
+    push: 
+        branches: 
+            - main
+            - github_actions
+
+jobs:
+    unit-testing:
+        name: Unit testing
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup node JS version - 18
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            
+            - name: Install dependices
+              run: npm install
+
+            - name: Unit testing
+              run: npm test
