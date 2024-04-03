@@ -5,7 +5,7 @@ on:
     push: 
         branches: 
             - main
-            - github_actions
+            - 'github_actions/*'
 
 jobs:
     unit-testing:
