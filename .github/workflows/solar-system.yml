@@ -5,7 +5,7 @@ on:
     push: 
         branches: 
             - main
-            - github_actions/
+            - github_actions
 
 env:
   MONGO_URI: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData'
